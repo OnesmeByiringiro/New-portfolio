@@ -36,78 +36,80 @@
       </div>
     </div>
     <!-------------------about----------------->
-
     <div id="about">
       <div class="container">
         <div class="row">
           <div class="about-col-1">
             <img src="images/user.png" />
           </div>
+
           <div class="about-col-2">
-            <h1 class="sub-title">About me</h1>
+            <h1 class="sub-title">About Me</h1>
             <p>
-              hey guys again this me Onesme byiringiro a web developer and
-              disgner. hey guys again this me Onesme byiringiro a web developer
-              and disgner. hey guys again this me Onesme byiringiro a web
-              developer and disgner. hey guys again this me Onesme byiringiro a
-              web developer and disgner. hey guys again this me Onesme
-              byiringiro a web developer and disgner. hey guys again this me
-              Onesme byiringiro a web developer and disgner. hey guys again this
-              me Onesme byiringiro a web developer and disgner. hey guys again
-              this me Onesme byiringiro a web developer and disgner.
+              Am Onesme byiringiro a student in universtity of Rwanda, Huye
+              campus. Am Onesme byiringiro a student in universtity of Rwanda,
+              Huye campus. Am Onesme byiringiro a student in universtity of
+              Rwanda, Huye campus. Am Onesme byiringiro a student in universtity
+              of Rwanda, Huye campus. Am Onesme byiringiro a student in
+              universtity of Rwanda, Huye campus. Am Onesme byiringiro a student
+              in universtity of Rwanda, Huye campus.
             </p>
-            <div class="tab-title">
-              <p class="tab-link active-link" onclick="opentab(Skills)">
+            <div class="tab-titles">
+              <div class="tab-links active-link" onclick="opentab('skills')">
                 Skills
-              </p>
-              <p class="tab-link" onclick="opentab(Experience)">Experience</p>
-              <p class="tab-link" onclick="opentab(Education)">Education</p>
+              </div>
+              <div class="tab-links" onclick="opentab('experience')">
+                Experience
+              </div>
+              <div class="tab-links" onclick="opentab('education')">
+                Education
+              </div>
             </div>
-            <div class="tab-contents active-tab" id="Skills">
+            <div class="tab-contents active-tab" id="skills">
               <ul>
                 <li>
-                  <span> Onesme Developer </span><br />
-                  web developer
+                  <span>Design </span> <br />
+                  Website Design
                 </li>
                 <li>
-                  <span> Onesme Designer </span><br />
-                  web Designer
+                  <span>Developer </span><br />
+                  website development
                 </li>
                 <li>
-                  <span> Onesme Maintainer </span><br />
-                  web Maintainer
+                  <span>Maintainer</span> <br />
+                  Website maintainance
                 </li>
               </ul>
             </div>
-            <div class="tab-contents" id="Experience">
+            <div class="tab-contents" id="experience">
               <ul>
                 <li>
-                  <span>2020 </span><br />
-                  web developer
+                  <span>2018 </span> <br />
+                  LEVEL 4 INTERNERSHIP
                 </li>
                 <li>
-                  <span> 2021 </span><br />
-                  web Designer
+                  <span>2019 </span><br />
+                  LEVEL 5 INTERNERSHIP
                 </li>
                 <li>
-                  <span> 2022 </span><br />
-                  web Maintainer
+                  <span>2020</span> <br />
+                  SELF COACHING STUDIES
                 </li>
               </ul>
             </div>
-            <div class="tab-contents" id="Education">
+            <div class="tab-contents" id="education">
               <ul>
                 <li>
-                  <span> 2017 </span><br />
-                  web developer
+                  <span>2008-2013 </span> <br />
+                  GS RWAMIKO/MATA
                 </li>
                 <li>
-                  <span> 2018 </span><br />
-                  web Designer
+                  <span>2014-2016 </span><br />
+                  GS MARIE MERCI KIBEHO
                 </li>
                 <li>
-                  <span> 2019 </span><br />
-                  web Maintainer
+                  <span>2017-2019</span> <br />
+                  GS BTR RWANIKO
                 </li>
               </ul>
             </div>
@@ -115,6 +117,7 @@
         </div>
       </div>
     </div>
+
     <!-- ------------------Services section----------------- -->
 
     <div id="services">
@@ -201,7 +204,7 @@
         <div class="row">
           <div class="contact-left">
             <h1 class="subtitle">Contact me</h1>
-            <p>onesmebyiringirpo@gmail.com</p>
+            <p>onesmebyiringiro@gmail.com</p>
             <p>Phone: 0784805822</p>
             <div class="social-media">
               <a href="https://facebook.com"
@@ -220,26 +223,30 @@
             <a href="images/my-cv.pdf" download class="btn btn2">Download cv</a>
           </div>
           <div class="contact-right">
-            <form name="submit-to-google-sheet">
+            <form
+              method="POST"
+              action="https://script.google.com/macros/s/AKfycbzJMN4URWJq2uXkVh_iPNQeJMbSOsgtd2T94pxtkWmAPwTg832tGDiUACCgyMkauvDf/exec"
+            >
               <input
                 type="text"
                 name="Name"
-                placeholder="enter your names"
+                placeholder="enter your Name"
                 required
               />
               <input
                 type="email"
                 name="Email"
-                placeholder="enter your email"
+                placeholder="enter your Email"
                 required
               />
               <textarea
-                name=""
                 name="Message"
                 rows="6"
                 placeholder="enter your messsage"
               ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
+              <button type="submit" name="submit" class="btn btn2">
+                Submit
+              </button>
             </form>
           </div>
         </div>
@@ -247,7 +254,7 @@
     </div>
 
     <script>
-      var tablinks = document.getElementsByClassName("tab-link");
+      var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
 
       function opentab(tabname) {
@@ -271,19 +278,6 @@
       function closemenu() {
         Sidemenu.style.right = "-200px";
       }
-    </script>
-
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbw1KDGxYVAPSKEGEz1lyjuv58IYgusLN33tjFWwoTK0zqbO-XfolMv1o1fDXgkViXy5/exec";
-      const form = document.forms["submit-to-google-sheet"];
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => console.log("Success!", response))
-          .catch((error) => console.error("Error!", error.message));
-      });
     </script>
   </body>
 </html>
